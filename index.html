@@ -11,21 +11,116 @@
     body {
       background: white;
     }
-    .topNav {
-      background: grey;
+    a {
+      text-decoration: none;
+      color: #666;
+      font-size: 12px;
+    }
+    a + a {
+      margin-left: 20px;
+    }
+    .topNav,
+    .footer {
+      display: flex;
+      justify-content: space-between;
       height: 60px;
+    }
+    .topNav > div,
+    .footer > div {
+      padding: 20px;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 70%;
+      margin: 80px auto;
+    }
+    .logo {
+      background: url(https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
+        no-repeat;
+      width: 272px;
+      height: 92px;
+      margin: 0 auto 40px auto;
+    }
+    .searchValue {
+      border: 1px solid lightgrey;
+      border-radius: 100px;
+      font-size: 16px;
+      padding: 8px 16px;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto 20px auto;
+      width: 232px;
+    }
+    .buttons button {
+      padding: 12px;
+      background: #eee;
+      color: #666;
+      border: none;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .linkSpotlight {
+      margin-bottom: 20px;
+    }
+    .linkSpotlight > a {
+      color: #1a0dab;
+      text-decoration: none;
+      font-size: 12px;
     }
     .footer {
       position: absolute;
       width: 100%;
       bottom: 0;
-      background: lightgrey;
-      height: 40px;
+      background: #eee;
+      border-top: 1px solid #ccc;
     }
   </style>
   <body>
-    <div class="topNav">Top nav here</div>
-    <div class="main">Main area here</div>
-    <div class="footer">Footer here</div>
+    <div class="topNav">
+      <div>
+        <a href="#">About</a>
+        <a href="#">Store</a>
+      </div>
+      <div>
+        <a href="#">Gmail</a>
+        <a href="#">Images</a>
+        <a href="#">Apps</a>
+        <a href="#">Account</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="content">
+        <div class="logo"></div>
+        <input class="searchValue" />
+        <div class="buttons">
+          <button>Google search</button>
+          <button>I'm feeling lucky</button>
+        </div>
+        <div class="linkSpotlight">
+          <a href="#"
+            >Watch the 2020 Vice Presidential Debate. Tonight on YouTube at 9PM
+            ET</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div>
+        <a href="#">Advertising</a>
+        <a href="#">Business</a>
+        <a href="#">How search works</a>
+      </div>
+      <div>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
   </body>
 </html>
